@@ -1,10 +1,11 @@
-import MainHeader from "./components/MainHeader/MainHeader";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="main-container">
-      <MainHeader />
+    <div>
+      <Header />
     </div>
   );
 }
+
 export default App;
