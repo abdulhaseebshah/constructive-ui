@@ -1,5 +1,4 @@
-// src/components/theme-provider.tsx
-
+import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function ThemeProvider({
@@ -8,11 +7,7 @@ export function ThemeProvider({
   children: React.ReactNode;
 }) {
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-    >
+    <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
       {children}
     </NextThemesProvider>
   );
