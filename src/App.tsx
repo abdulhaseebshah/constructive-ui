@@ -1,17 +1,17 @@
-import React from "react";
-import { Button } from "./components/ui/button";
-import { useTheme } from "next-themes";
+import { Outlet } from "react-router";
+import SiteHeader from "./components/site-components/site-header";
+import SiteSidebar from "./components/site-components/site-sidebar";
 
 function App() {
-  const { theme, setTheme } = useTheme();
   return (
     <>
-      <Button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        variant={"outline"}
-      >
-        {theme === "dark" ? "Light" : "Dark"}
-      </Button>
+      <SiteHeader />
+      <div className="flex">
+        <SiteSidebar />
+        <div className="p-4 h-[200vh]">
+          <Outlet />
+        </div>
+      </div>
     </>
   );
 }
